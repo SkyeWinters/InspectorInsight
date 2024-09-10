@@ -42,7 +42,7 @@ public class SnapOnRelease : MonoBehaviour
         if (_snapTo.bounds.Contains(transform.position))
         {
             transform.position = new Vector3(_snapTo.transform.position.x, transform.position.y, transform.position.z);
-            transform.eulerAngles = new Vector3(90, 0, 0);
+            transform.eulerAngles = new Vector3(0, -90, 0);
             _rigidBody.useGravity = false;
             _rigidBody.velocity = Vector3.zero;
             _rigidBody.angularVelocity = Vector3.zero;

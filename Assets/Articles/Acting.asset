@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
+  m_Name: Acting
+  m_EditorClassIdentifier: 
+  Label: Acting
+  Title: Masks of Desperation
+  Description: A profile on an aging actor clinging to roles that no longer suit
+    them, playing parts on stage that mirror their own life's unraveling.
+  Audio: {fileID: 8300000, guid: 8056c7632a254ea49bd9eb70b4663f9f, type: 3}
+  Category: 0

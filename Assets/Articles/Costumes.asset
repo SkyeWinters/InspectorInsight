@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
+  m_Name: Costumes
+  m_EditorClassIdentifier: 
+  Label: Costumes
+  Title: Stories in the Seams
+  Description: "A feature on how costumes play a silent but vital role, weaving a
+    story of their own\u2014each stitch, each fabric choice an echo of the character\u2019s
+    journey and the era they live in."
+  Audio: {fileID: 8300000, guid: 5d22d688115e5784c9f8d64d2c89fbba, type: 3}
+  Category: 0

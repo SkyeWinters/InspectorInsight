@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
+  m_Name: Comedy
+  m_EditorClassIdentifier: 
+  Label: Comedy
+  Title: Laughter in the Gloom
+  Description: An article highlighting how comedy brings light in the darkest of
+    times, offering a momentary escape and a flicker of hope even when all else feels
+    lost.
+  Audio: {fileID: 8300000, guid: 6a44b6bddea374e4ab73cd046bbd85cd, type: 3}
+  Category: 0

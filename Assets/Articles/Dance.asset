@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
+  m_Name: Dance
+  m_EditorClassIdentifier: 
+  Label: Dance
+  Title: Dancing in the Dark
+  Description: A dancer speaks about rehearsals lit only by streetlights from broken
+    windows, trying to maintain elegance amidst fading fortunes and failing dreams.
+  Audio: {fileID: 8300000, guid: 4e011dcd4661e2846bd581028f85b7b4, type: 3}
+  Category: 0

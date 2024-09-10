@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
+  m_Name: Blocking
+  m_EditorClassIdentifier: 
+  Label: Blocking
+  Title: Mapping the Spotlight
+  Description: An inside look at the painstaking preparation for a new production,
+    where every step, every movement on the stage is choreographed to create a visual
+    dance that speaks volumes.
+  Audio: {fileID: 8300000, guid: a93750ff77d2e4849b684208360f5970, type: 3}
+  Category: 0

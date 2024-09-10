@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  Label: Dialogue
+  Title: Words That Paint Worlds
+  Description: "A deep dive into the power of dialogue, where each line an actor
+    delivers brings the play\u2019s story to life, transforming mere words into a
+    rich tapestry of emotion and meaning."
+  Audio: {fileID: 8300000, guid: fcac020c4ac9b694ab216ce0ac039bff, type: 3}
+  Category: 0
