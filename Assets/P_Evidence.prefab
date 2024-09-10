@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339871476853043414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.58}
+  m_LocalPosition: {x: 0, y: 0, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.03, y: -0.059}
+  m_AnchoredPosition: {x: 0.024, y: -0.167}
   m_SizeDelta: {x: 1, y: 0.8822}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5634865720432807892
@@ -100,10 +100,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
-    urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.
-    Sed nec diam eu diam mattis viverra nulla. Nulla fringilla, orci ac euismod semper,
-    magna diam
+  m_text: "Bionic lenses promise vision correction beyond 20/20, but doctors warn
+    of potential long-term eye damage, software malfunctions, and costly updates.
+    Are we sacrificing our eyes to be \u2018superhuman\u2019?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -275,7 +274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Social Relationships
+  m_text: Factors Influencing Human Connection
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -543,6 +542,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5474203921639093960}
+        m_TargetAssemblyTypeName: EvidenceObject, Assembly-CSharp
+        m_MethodName: RemoveFromBoard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -686,6 +697,21 @@ MonoBehaviour:
   _materialDisplay: {fileID: 1289205618756491556}
   _canPlaceMaterial: {fileID: 2100000, guid: 473220edf012ca94e9653a044689fdc1, type: 2}
   _canNotPlaceMaterial: {fileID: 2100000, guid: 9cb370e77d4293b4c9c897d1394803ab, type: 2}
+  _onSnap:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5474203921639093960}
+        m_TargetAssemblyTypeName: EvidenceObject, Assembly-CSharp
+        m_MethodName: AddToBoard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5474203921639093960
 MonoBehaviour:
   m_ObjectHideFlags: 0

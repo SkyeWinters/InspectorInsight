@@ -68,6 +68,8 @@ public class CSVToArticleConverter : EditorWindow
                 Debug.LogWarning($"Category '{values[3].Trim()}' on line {i + 1} is not valid.");
                 continue;
             }
+            
+            newArticle.Audio = FindAudioClip(newArticle.Label);
 
             string assetPath = $"{localDirectory}/{newArticle.Label}.asset";
             AssetDatabase.CreateAsset(newArticle, assetPath);
@@ -106,4 +108,24 @@ public class CSVToArticleConverter : EditorWindow
         result.Add(currentField.Trim());
         return result.ToArray();
     }
+    
+    private AudioClip FindAudioClip(string label)
+    {
+        string audioFolderPath = "Assets/Audio";
+        string[] audioFiles = Directory.GetFiles(audioFolderPath, "*.mp3", SearchOption.AllDirectories);
+
+        foreach (string audioFile in audioFiles)
+        {
+            string audioFileName = Path.GetFileNameWithoutExtension(audioFile);
+
+            if (audioFileName.Equals(label, System.StringComparison.OrdinalIgnoreCase))
+            {
+                return AssetDatabase.LoadAssetAtPath<AudioClip>(audioFile.Replace(Application.dataPath, "Assets"));
+            }
+        }
+
+        Debug.LogWarning($"No matching audio file found for label: {label}");
+        return null;
+    }
+
 }

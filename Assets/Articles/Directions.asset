@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
-  m_Name: Thrapy
+  m_Name: Directions
   m_EditorClassIdentifier: 
-  Label: Thrapy
-  Title: Theatre as Therapy
-  Description: "A proposal suggesting the theatre open its doors to those in need,
-    transforming the stage into a place for healing\u2014a sanctuary for the broken
-    and weary souls of the city."
+  Label: Directions
+  Title: Navigating with Bionic Eyes
+  Description: Real-time directions straight to your eyes could change the way we
+    navigate the world, keeping your hands free and your focus forward. But is this
+    just the beginning of augmented dependence?
   Audio: {fileID: 0}
-  Category: 0
+  Category: 1

@@ -17,5 +17,5 @@ MonoBehaviour:
   Description: "A feature on how costumes play a silent but vital role, weaving a
     story of their own\u2014each stitch, each fabric choice an echo of the character\u2019s
     journey and the era they live in."
-  Audio: {fileID: 8300000, guid: 5d22d688115e5784c9f8d64d2c89fbba, type: 3}
+  Audio: {fileID: 0}
   Category: 0

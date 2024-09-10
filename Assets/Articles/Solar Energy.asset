@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
-  m_Name: SO_Evidence_SocialRelations
+  m_Name: Solar Energy
   m_EditorClassIdentifier: 
-  _name: Social Relationships
-  _description: Was the third one created
+  Label: Solar Energy
+  Title: Bionic Lenses Go Solar
+  Description: Bionic lenses harness solar energy to function without ever needing
+    a charge, promising a green future where technology is powered by nature itself.
+  Audio: {fileID: 0}
+  Category: 1

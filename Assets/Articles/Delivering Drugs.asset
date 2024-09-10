@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
-  m_Name: Thrapy
+  m_Name: Delivering Drugs
   m_EditorClassIdentifier: 
-  Label: Thrapy
-  Title: Theatre as Therapy
-  Description: "A proposal suggesting the theatre open its doors to those in need,
-    transforming the stage into a place for healing\u2014a sanctuary for the broken
-    and weary souls of the city."
+  Label: Delivering Drugs
+  Title: Medicines on Demand
+  Description: Bionic lenses delivering drugs directly to the eye could revolutionize
+    treatments for chronic conditions, making medication regimens more efficient
+    and less invasive.
   Audio: {fileID: 0}
-  Category: 0
+  Category: 1

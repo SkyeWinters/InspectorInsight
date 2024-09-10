@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
-  m_Name: SO_Evidence_Second
+  m_Name: Theatre Dance
   m_EditorClassIdentifier: 
-  _name: Bionic Contact Lens
-  _description: Was the second one created
+  Label: Theatre Dance
+  Title: Dancing in the Dark
+  Description: A dancer speaks about rehearsals lit only by streetlights from broken
+    windows, trying to maintain elegance amidst fading fortunes and failing dreams.
+  Audio: {fileID: 0}
+  Category: 0

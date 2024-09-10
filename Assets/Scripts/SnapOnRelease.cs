@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SnapOnRelease : MonoBehaviour
@@ -9,6 +10,7 @@ public class SnapOnRelease : MonoBehaviour
     [SerializeField] MeshRenderer _materialDisplay;
     [SerializeField] Material _canPlaceMaterial;
     [SerializeField] Material _canNotPlaceMaterial;
+    [SerializeField] private UnityEvent _onSnap;
 
     private Rigidbody _rigidBody;
     private bool grabbed;
@@ -48,6 +50,7 @@ public class SnapOnRelease : MonoBehaviour
             _rigidBody.angularVelocity = Vector3.zero;
             _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
             Debug.Log("In Area");
+            _onSnap.Invoke();
         }
     }
 }

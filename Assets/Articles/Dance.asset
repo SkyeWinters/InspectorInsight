@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dance
   m_EditorClassIdentifier: 
   Label: Dance
-  Title: Dancing in the Dark
-  Description: A dancer speaks about rehearsals lit only by streetlights from broken
-    windows, trying to maintain elegance amidst fading fortunes and failing dreams.
+  Title: Factors Influencing Human Connection
+  Description: Study examining how dance facilitates social connections and strengthens
+    community bonds through shared movement and expression.
   Audio: {fileID: 8300000, guid: 4e011dcd4661e2846bd581028f85b7b4, type: 3}
-  Category: 0
+  Category: 2
