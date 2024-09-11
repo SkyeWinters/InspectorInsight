@@ -1,0 +1,45 @@
+{
+    "name": "Button Press",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "9d0932af-a091-4d99-b436-e6cb979d5109",
+            "actions": [
+                {
+                    "name": "A Press",
+                    "type": "Button",
+                    "id": "797f1a9d-2215-466b-b49b-93560bc00275",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c8ced767-fb4e-4e9d-91e2-2359f1dfac05",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50bc8a82-e9cf-444a-b1da-3627a429a30f",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

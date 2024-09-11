@@ -2,35 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SnapOnRelease : MonoBehaviour
 {
-    [SerializeField] BoxCollider _snapTo;
-    [SerializeField] MeshRenderer _materialDisplay;
-    [SerializeField] Material _canPlaceMaterial;
-    [SerializeField] Material _canNotPlaceMaterial;
+    [SerializeField] private MeshRenderer _materialDisplay;
+    [SerializeField] private Material _canPlaceMaterial;
+    [SerializeField] private Material _canNotPlaceMaterial;
     [SerializeField] private UnityEvent _onSnap;
 
+    private SnapPoint  _snapPoint;
     private Rigidbody _rigidBody;
-    private bool grabbed;
+    private bool _grabbed;
 
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
-        _snapTo = GameObject.FindGameObjectWithTag("Board").GetComponent<BoxCollider>();
     }
 
     private void Update()
     {
-        if (!grabbed) return;
+        if (!_grabbed) return;
 
-        _materialDisplay.material = _snapTo.bounds.Contains(transform.position) ? _canPlaceMaterial : _canNotPlaceMaterial;
+        _materialDisplay.material = _snapPoint.Contains(transform) ? _canPlaceMaterial : _canNotPlaceMaterial;
+    }
+
+    public void SetSnapCollider(SnapPoint snapTo)
+    {
+        _snapPoint = snapTo;
     }
 
     public void OnGrab()
     {
-        grabbed = true;
+        _grabbed = true;
         _rigidBody.constraints = RigidbodyConstraints.None;
         _rigidBody.useGravity = true;
     }
@@ -38,19 +43,22 @@ public class SnapOnRelease : MonoBehaviour
     public void OnRelease()
     {
         Debug.Log("Released");
-        grabbed = false;
+        _grabbed = false;
         _materialDisplay.material = _canNotPlaceMaterial;
 
-        if (_snapTo.bounds.Contains(transform.position))
-        {
-            transform.position = new Vector3(_snapTo.transform.position.x, transform.position.y, transform.position.z);
-            transform.eulerAngles = new Vector3(0, -90, 0);
-            _rigidBody.useGravity = false;
-            _rigidBody.velocity = Vector3.zero;
-            _rigidBody.angularVelocity = Vector3.zero;
-            _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
-            Debug.Log("In Area");
-            _onSnap.Invoke();
-        }
+        if (!_snapPoint.Contains(transform)) return;
+        
+        SnapToPoint();
+    }
+
+    private void SnapToPoint()
+    {
+        _snapPoint.SnapToSnapPoint(transform);
+        _rigidBody.useGravity = false;
+        _rigidBody.velocity = Vector3.zero;
+        _rigidBody.angularVelocity = Vector3.zero;
+        _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
+        Debug.Log("In Area");
+        _onSnap.Invoke();
     }
 }

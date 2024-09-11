@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 8065036203408813730}
   - component: {fileID: 5474203921639093960}
   - component: {fileID: 4949838181875014707}
+  - component: {fileID: 5916686374857294282}
   m_Layer: 0
   m_Name: P_Evidence
   m_TagString: Untagged
@@ -384,6 +385,7 @@ Transform:
   m_Children:
   - {fileID: 4552551062712055204}
   - {fileID: 2340221671694714137}
+  - {fileID: 7586770840833733225}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -532,7 +534,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5474203921639093960}
         m_TargetAssemblyTypeName: EvidenceObject, Assembly-CSharp
-        m_MethodName: PlayAudio
+        m_MethodName: OnGrab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -556,7 +558,19 @@ MonoBehaviour:
         m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5474203921639093960}
+        m_TargetAssemblyTypeName: EvidenceObject, Assembly-CSharp
+        m_MethodName: OnRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
@@ -693,7 +707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b4bc0f1788c4c4181795cbf9dfd95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _snapTo: {fileID: 0}
   _materialDisplay: {fileID: 1289205618756491556}
   _canPlaceMaterial: {fileID: 2100000, guid: 473220edf012ca94e9653a044689fdc1, type: 2}
   _canNotPlaceMaterial: {fileID: 2100000, guid: 9cb370e77d4293b4c9c897d1394803ab, type: 2}
@@ -726,6 +739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nameText: {fileID: 660031263881287716}
   _descriptionText: {fileID: 7385531327631957063}
+  _snapOnRelease: {fileID: 8065036203408813730}
+  _linkPoint: {fileID: 7586770840833733225}
 --- !u!82 &4949838181875014707
 AudioSource:
   m_ObjectHideFlags: 0
@@ -822,3 +837,80 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5916686374857294282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809436206894319537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: fe2ea930568b61e4a9aabf27816eaf30, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5474203921639093960}
+        m_TargetAssemblyTypeName: EvidenceObject, Assembly-CSharp
+        m_MethodName: OnKeyPress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 797f1a9d-2215-466b-b49b-93560bc00275
+    m_ActionName: Default/A Press
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Default
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!1 &8368010181006993250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7586770840833733225}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7586770840833733225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368010181006993250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.488, z: -3.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8053254306847288023}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

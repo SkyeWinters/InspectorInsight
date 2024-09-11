@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Social Class
   m_EditorClassIdentifier: 
   Label: Social Class
-  Title: Social Class and Relationships
-  Description: Study examining the influence of social class on communication and
-    relationship dynamics.
+  Title: The Bionic Divide
+  Description: As bionic lenses emerge as the new frontier in tech, a divide grows
+    between those who can afford the future and those left in the past. Are they
+    widening the gap between the haves and the have-nots?
   Audio: {fileID: 0}
-  Category: 2
+  Category: 1
