@@ -12,28 +12,32 @@ public class IdeaBubble : MonoBehaviour
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private TMP_Text _hintNode;
 
-    private IXRInteractor _interactable;
     private bool _hasLink;
 
     private void Awake()
     {
         _lineRenderer.SetPositions(new[] {transform.position, transform.position, transform.position, transform.position});
+        _lineRenderer.enabled = true;
+        _particleSystem.Stop();
         _hintNode.text = _idea.ConnectionOne.Title + "\n" + _idea.ConnectionTwo.Title;
         _hintNode.gameObject.SetActive(false);
     }
 
     public void OnGrab(SelectEnterEventArgs grabData)
     {
-        _interactable = grabData.interactorObject;
-        Debug.Log("Grabbed with " + ((_interactable.interactionLayers & (1 << 1)) == 0 ? "Right" : "Left"));
         if (SelectedIdea != null)
         {
             SelectedIdea.StopSelecting();
         }
-        _lineRenderer.enabled = true;
+
+        StartSelecting();
+    }
+
+    private void StartSelecting()
+    {
         var index = _hasLink ? 2 : 0;
-        _hintNode.gameObject.SetActive(true);
         
+        _hintNode.gameObject.SetActive(true);
         _lineRenderer.SetPosition(index, transform.position);
         _particleSystem.Play();
         SelectedIdea = this;
@@ -41,7 +45,7 @@ public class IdeaBubble : MonoBehaviour
 
     public void LinkTo(Article evidence, Transform target)
     {
-        var index = -1;
+        int index;
         if (_idea.ConnectionOne == evidence)
         {
             index = 1;
@@ -60,9 +64,8 @@ public class IdeaBubble : MonoBehaviour
     
     public void StopSelecting()
     {
-        Debug.Log("Released");
-        _particleSystem.Stop();
         SelectedIdea = null;
+        _particleSystem.Stop();
         _hintNode.gameObject.SetActive(false);
     }
 }
