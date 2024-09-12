@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -12,54 +13,73 @@ public class IdeaBubble : MonoBehaviour
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private TMP_Text _hintNode;
 
-    private bool _hasLink;
+    private List<ScriptableObject> _linkedArticles;
 
     private void Awake()
     {
-        _lineRenderer.SetPositions(new[] {transform.position, transform.position, transform.position, transform.position});
         _lineRenderer.enabled = true;
         _particleSystem.Stop();
-        _hintNode.text = _idea.ConnectionOne.Title + "\n" + _idea.ConnectionTwo.Title;
+        if (_idea != null)
+        {
+            SetIdea(_idea);
+        }
         _hintNode.gameObject.SetActive(false);
+    }
+    
+    public void SetIdea(Idea idea)
+    {
+        _idea = idea;
+        _hintNode.text = _idea.Hint;
+        
+        _lineRenderer.positionCount = _idea.Connections.Count * 2;
+        
+        var positions = new Vector3[_lineRenderer.positionCount];
+        for (int i = 0; i < _lineRenderer.positionCount; i++)
+        {
+            positions[i] = transform.position;
+        }
+        _lineRenderer.SetPositions(positions);
+        
+        _linkedArticles = new List<ScriptableObject>();
     }
 
     public void OnGrab(SelectEnterEventArgs grabData)
     {
-        if (SelectedIdea != null)
+        if (IsCompleted() && SelectedIdea != null && SelectedIdea._idea.Connections.Contains(_idea))
         {
+            SelectedIdea.LinkTo(_idea, transform);
             SelectedIdea.StopSelecting();
         }
+        else
+        {
+            if (SelectedIdea != null)
+            {
+                SelectedIdea.StopSelecting();
+            }
 
-        StartSelecting();
+            StartSelecting();
+        }
     }
 
     private void StartSelecting()
     {
-        var index = _hasLink ? 2 : 0;
-        
+        _hintNode.text = IsCompleted() ? _idea.Description : _idea.Hint;
         _hintNode.gameObject.SetActive(true);
-        _lineRenderer.SetPosition(index, transform.position);
         _particleSystem.Play();
         SelectedIdea = this;
     }
 
-    public void LinkTo(Article evidence, Transform target)
+    public void LinkTo(ScriptableObject evidence, Transform target)
     {
-        int index;
-        if (_idea.ConnectionOne == evidence)
-        {
-            index = 1;
-        }
-        else if (_idea.ConnectionTwo == evidence)
-        {
-            index = 3;
-        }
-        else
-        {
-            return;
-        }
-        _lineRenderer.SetPosition(index, target.position);
-        _hasLink = true;
+        if (!_idea.Connections.Contains(evidence) || _linkedArticles.Contains(evidence)) return;
+        
+        _lineRenderer.SetPosition(_idea.Connections.IndexOf(evidence) * 2 + 1, target.position);
+        _linkedArticles.Add(evidence);
+    }
+    
+    public bool IsCompleted()
+    {
+        return _linkedArticles.Count == _idea.Connections.Count;
     }
     
     public void StopSelecting()

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b0637d2c04b3b8f54f8a2edec8d60, type: 3}
+  m_Name: SO_Idea_TC_LiveTimeTheatreCaptions
+  m_EditorClassIdentifier: 
+  Hint: If I think about dialogue and live captions together... could it be a way
+    to make theatre more accessible, more inclusive?
+  Description: "Got it! Captions in real-time, not just for the audience, but for
+    the performers too. A way to bridge gaps, to make sure everyone\u2014no matter
+    who they are\u2014gets the full picture. The theatre becomes a space for everyone."
+  Connections:
+  - {fileID: 11400000, guid: 5b6936d0f3581e2498607cc3879f419b, type: 2}
+  - {fileID: 11400000, guid: c891bbde3518f584285a55c307907552, type: 2}

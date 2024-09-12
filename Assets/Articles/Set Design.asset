@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2de9b6dbeed9b0c46a8bc508193e3f97, type: 3}
-  m_Name: Blocking
+  m_Name: Set Design
   m_EditorClassIdentifier: 
-  Label: Blocking
-  Title: Mapping the Spotlight
-  Description: An inside look at the painstaking preparation for a new production,
-    where every step, every movement on the stage is choreographed to create a visual
-    dance that speaks volumes.
+  Label: Set Design
+  Title: Set Design Methodology
+  Description: Study exploring how set design elements, such as color, space, and
+    texture, influence audience perception, emotional engagement, and narrative understanding
+    within a theatrical production.
   Audio: {fileID: 8300000, guid: a93750ff77d2e4849b684208360f5970, type: 3}
   Category: 0

@@ -71,8 +71,17 @@ public class CSVToArticleConverter : EditorWindow
             
             newArticle.Audio = FindAudioClip(newArticle.Label);
 
-            string assetPath = $"{localDirectory}/{newArticle.Label}.asset";
-            AssetDatabase.CreateAsset(newArticle, assetPath);
+            var assetPath = $"{localDirectory}/{newArticle.Label}.asset";
+            var existingArticle = AssetDatabase.LoadAssetAtPath<Article>(assetPath);
+            if (existingArticle!= null)
+            {
+                existingArticle.CloneFrom(newArticle);
+                EditorUtility.SetDirty(existingArticle);
+            }
+            else
+            {
+                AssetDatabase.CreateAsset(newArticle, assetPath);
+            }
         }
 
         AssetDatabase.SaveAssets();

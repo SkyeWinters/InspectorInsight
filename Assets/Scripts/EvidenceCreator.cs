@@ -8,7 +8,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(AudioSource))]
 public class EvidenceCreator : MonoBehaviour
 {
-    private const int EVIDENCE_TOTAL = 5;
+    private const int EVIDENCE_TOTAL = 35;
     
     [SerializeField] private GameObject _evidencePrefab;
     [SerializeField] private List<Article> _evidenceDataList;
@@ -29,8 +29,15 @@ public class EvidenceCreator : MonoBehaviour
     private void Start()
     {
         CreateEvidence();
+        StartCoroutine(WaitForSeconds(2));
     }
 
+    private IEnumerator WaitForSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        _audioSource.Play();
+    }
+    
     private void CreateEvidence()
     {
         var pilesCount = _evidencePiles.Count;

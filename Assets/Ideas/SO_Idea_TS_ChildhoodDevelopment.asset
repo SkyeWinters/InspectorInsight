@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b0637d2c04b3b8f54f8a2edec8d60, type: 3}
+  m_Name: SO_Idea_TS_ChildhoodDevelopment
+  m_EditorClassIdentifier: 
+  Title: TS_ChildhoodDevelopment
+  Hint: "There's something about a kid on stage\u2026 acting out someone else\u2019s
+    life. It does more than entertain; it molds them, shapes their view of the world."
+  Description: Studies say bringing theatre to young minds opens doors in their heads,
+    teaches them to see from another's eyes. Acting is more than just playing a part;
+    it's learning empathy, one scene at a time.
+  Connections:
+  - {fileID: 11400000, guid: 103e9144e84d3864896d5ac0333af67b, type: 2}
+  - {fileID: 11400000, guid: 90426ffd01f003b47b043f38c57be5b0, type: 2}

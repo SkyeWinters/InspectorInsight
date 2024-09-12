@@ -15,4 +15,13 @@ public class Article : ScriptableObject
     public string Description;
     public AudioClip Audio;
     public ArticleCategory Category;
+    
+    public void CloneFrom(Article newArticle)
+    {
+        Label = newArticle.Label;
+        Title = newArticle.Title;
+        Description = newArticle.Description;
+        Audio = newArticle.Audio;
+        Category = newArticle.Category;
+    }
 }

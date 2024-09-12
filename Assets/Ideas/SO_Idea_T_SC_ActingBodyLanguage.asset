@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110b0637d2c04b3b8f54f8a2edec8d60, type: 3}
+  m_Name: SO_Idea_T_SC_ActingBodyLanguage
+  m_EditorClassIdentifier: 
+  Hint: "Actors and body language\u2026 Maybe if the lenses could teach the actors
+    to speak without words, there\u2019s something in that."
+  Description: Aha! The lenses could refine every gesture, every glance. Actors wouldn't
+    just say their lines; they'd live them, make every move speak volumes. A new
+    kind of performance, where silence says it all.
+  Connections:
+  - {fileID: 11400000, guid: 103e9144e84d3864896d5ac0333af67b, type: 2}
+  - {fileID: 11400000, guid: ca4001f7f6d84d34a87786f0da225492, type: 2}
